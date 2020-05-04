@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+body{
+  width:100%;
+  height:100%;
+  background: linear-gradient(138deg, #2193b0, #6dd5ed, #753a88, #cc2b5e);
+  background-size: 800% 800%;
+
+  -webkit-animation: change 56s ease infinite;
+  -moz-animation: change 56s ease infinite;
+  -o-animation: change 56s ease infinite;
+  animation: change 56s ease infinite;
+
+  color: white;
+  font-size: 23px;;
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.app{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.options{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 66vw;
+}
+
+.item{
+  flex-basis: 33%;
+  margin-bottom: 1vh;
+}
+
+.item input[type="number"]{
+  width: 5vw;
+  text-align: center;
+}
+
+.submit{
+  flex-basis: 100%;
+  margin-bottom: 1vh;
+  width: 100%;
+}
+
+.submit input[type="button"]{
+  width: 100%;;
+}
+
+.how{
+  background-color: white;
+  border: 2px solid black;
+  width: 64vw;
+  min-height: 10vh;
+  margin-top: 2vh;
+  padding: 1vw;
+  color: black;
+  text-align: start;
+}
+
+svg{
+  background-color: white;
+  width: 66vw;
+  height: 60vh;
+  border: 2px solid black;
+}
+
+@-webkit-keyframes change {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+
+@-moz-keyframes change {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+
+@-o-keyframes change {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+
+@keyframes change {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}

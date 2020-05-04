@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
+  <title>Double pendulm</title>
+</head>
+<body>
+<div class="app">
+  <div class="options">
+      <div class="item">
+        <label for="l1">Length 1 (m)</label>
+        <input type="number" id="l1" name="l1" min="50" max="200" value ="125">
+      </div>
+      <div class="item">
+        <label for="l2">Length 2 (m)</label>
+        <input type="number" id="l2" name="l2" min="50" max="200" value="125">
+      </div>
+      <div class="item">
+        <label for="m1">Mass 1 (kg)</label>
+        <input type="number" id="m1" name="m1" min="0.2" max="20" value="10">
+      </div>
+      <div class="item">
+        <label for="m2">Mass 2 (kg)</label>
+        <input type="number" id="m2" name="m2" min="0.2" max="20" value="10">
+      </div>
+      <div class="item">
+        <label for="a1">Angle 1 (degree)</label>
+        <input type="number" id="a1" name="a1" min="0" max="360" value="90">
+      </div>
+      <div class="item">
+        <label for="a2">Angle2 (degree)</label>
+        <input type="number" id="a2" name="a2" min="0" max="360" value="90">
+      </div>
+      <div class="item">
+        <label for="g">Gravity (m/s^2)</label>
+        <input type="number" id="g" name="g" min="0" max="20" value="1">
+      </div>
+      <div class="item">
+        <label for="friction">Friction (loss ratio)</label>
+        <input type="number" id="friction" name="friction" min="0" max="1" value="1">
+      </div>
+      <div class="item">
+        <label for="speed">Speed of simulation</label>
+        <input type="number" id="speed" name="speed" min="0" max="60" value="60">
+      </div>
+      <div class="submit">
+        <input id="start" type="button" value="Start simmulation">
+      </div>
+      <div class="submit">
+        <input id="play" type="button" value="Play/Pause">
+      </div>
+  </div>
+  <svg
+    id="frame"
+    version="1.1"
+    baseProfile="full"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+  </svg>
+
+  <div class="how">
+    <h1> How to use?</h1>
+    <ul>
+      <li>Change the values of the starting position of the pendulm.</li>
+      <li>Click "Start simulation" button to start.</li>
+      <li>Click the "Play/Pause" button to pause and play the simulation.</li>
+    </ul>
+    <hr/>
+    <h2>Input description:</h2>
+    <ol>
+      <li>Length 1 : length of the first "red" string  range : (50 : 200)</li>
+      <li>Length 2 : length of the second "blue" string  range : (50 : 200)</li>
+      <li>Mass 1: weight of the "red" ball range(0.2:20)</li>
+      <li>Mass 2: weight of the "blue" ball range(0.2:20) </li>
+      <li>Angle 1 : Angle of "blue" string range(0:360)</li>
+      <li>Angle 2 : Angle of "red" string range(0:360)</li>
+      <li>Gravity : the gravity you wish to apply</li>
+      <li>Friction: the loss ratio. range: (0 : 1)<br/>ex: if friction is 0.998 this means that the speed decreased by (1 - 0.998) per frame</li>
+      <li>Speed of simulation: the speed of the running simulation range: (0 : 60)</li>
+      
+    </ol>
+
+    <hr/>
+    <h2>Notes:</h2>
+    <ul>
+      <li>Chnaging the values will RESET the simulation.</li>
+      <li>Clicking the "Start simulation" button will RESET the simulation </li>
+      <li>Please stay within the described limits above to have a good experince watching the simulation</li>
+    </ul>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
