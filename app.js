@@ -75,7 +75,7 @@ const updateAcceleration = () =>{
         numrator4   = (a2_v ** 2) * r2 + (a1_v ** 2) * r1 * Math.cos(a1 - a2),
         denomenator = r1 * (2 * m1 + m2 - m2 * Math.cos(2*a1 - 2*a2));
 
-  a1_a = (numrator1 + numrator2 + numrator3*numrator4) / denomenator; 
+  a1_a = (numrator1 + numrator2 + (numrator3*numrator4)) / denomenator; 
 
         numrator1   = 2 * Math.sin(a1-a2),
         numrator2   = (a1_v **2) * r1 * (m1 + m2),
@@ -238,9 +238,7 @@ document.querySelector('#play').addEventListener('click', () => {
   play();
 })
 
-
-
-/* Main loop */
+/*  Called only one time to render items */
 setup()
 
 
